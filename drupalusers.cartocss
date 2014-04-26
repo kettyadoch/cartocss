@@ -1,0 +1,54 @@
+/** bubble visualization */
+
+#select_africa_copy{
+  marker-fill: #5CA2D1;
+  marker-line-color: #FFF;
+  marker-line-width: 2;
+  marker-line-opacity: 1;
+  marker-opacity: 0.9;
+  marker-placement: point;
+  marker-type: ellipse;
+  marker-allow-overlap: true;
+  marker-clip: false;
+  marker-multi-policy: largest;
+}
+#select_africa_copy [ country2 <= 500] {
+   marker-width: 70.0;
+}
+#select_africa_copy [ country2 <= 200] {
+   marker-width: 60.0;
+}
+#select_africa_copy [ country2 <= 100] {
+   marker-width: 50.3;
+}
+#select_africa_copy [ country2 <= 50] {
+   marker-width: 40.7;
+}
+#select_africa_copy [ country2 <= 25] {
+   marker-width: 30.0;
+}
+#select_africa_copy [ country2 <= 12] {
+   marker-width: 20;
+}
+#select_africa_copy [ country2 <= 6] {
+   marker-width: 10;
+}
+#select_africa_copy [ country2 = 0] {
+   marker-width: 0.0;
+}
+
+#select_africa_copy::labels [country2 > 0]{
+  text-name: [perc] + '%' ;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 20;
+  text-fill: #000;
+  text-allow-overlap: true;
+  text-halo-fill: #FFF;
+  text-halo-radius: 1;
+  text-dy: 10;
+     text-placement-type: simple;
+  text-placements: "N";
+   text-wrap-width: 80;
+  text-wrap-before: false;
+
+}
